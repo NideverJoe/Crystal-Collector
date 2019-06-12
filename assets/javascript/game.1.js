@@ -1,6 +1,6 @@
-// Version built with passing functions for click events
+// Version without passing functions
 
-
+var firevalue = 0;
 var watervalue = 0;
 var thundervalue = 0;
 var leafvalue = 0;
@@ -8,10 +8,6 @@ var goalnumber = 0;
 var wins = 0;
 var losses = 0;
 var crystaltotal = 0;
-var audiowin = new Audio("assets/win.mp3");
-var audiolose = new Audio("assets/lose.mp3");
-var audiochip = new Audio("assets/chip_sound.mp3");
-
 
 //game start - display wins and losses
 
@@ -42,55 +38,50 @@ function showinitialvalues () {
     
 }
 
-
-gems = {
-    onclickFunction: function (clickValue){
-        if (clickValue==="firestone"){
-            clickValue= firevalue
-        }else if(clickValue==="waterstone"){
-            clickValue=watervalue
-        }else if(clickValue==="thunderstone"){
-            clickValue=thundervalue
-        }else if(clickValue==="leafstone"){
-            clickValue=leafvalue
-        }
-
-
-        //====
-       
-        crystaltotal += clickValue;
-        console.log("Current Total = " + crystaltotal);
-        $("#totalscore").text(crystaltotal);
-        valuechecker();
-    }
-
-}
-
-
 // click commands to add value of each crystal to total and update screen with current crystal total
-$(".buttons").on("click", function() {
-    idOfInput=$(this).attr("id")
-    gems.onclickFunction(idOfInput)
+$("#firestone").on("click", function() {
+    console.log(firevalue);
+    crystaltotal += firevalue;
+    console.log("Current Total = " + crystaltotal);
+    $("#totalscore").text(crystaltotal);
+    valuechecker();
 })
 
+$("#waterstone").on("click", function() {
+    console.log(watervalue);
+    crystaltotal += watervalue;
+    console.log("Current Total = " + crystaltotal);
+    $("#totalscore").text(crystaltotal);
+    valuechecker();
+})
 
+$("#thunderstone").on("click", function() {
+    console.log(thundervalue);
+    crystaltotal += thundervalue;
+    console.log("Current Total = " + crystaltotal);
+    $("#totalscore").text(crystaltotal);
+    valuechecker();
+})
+
+$("#leafstone").on("click", function() {
+    console.log(leafvalue);
+    crystaltotal += leafvalue;
+    console.log("Current Total = " + crystaltotal);
+    $("#totalscore").text(crystaltotal);
+    valuechecker();
+})
 function valuechecker (){
 if (crystaltotal===goalnumber) {
-    audiochip.play();
-    audiowin.play();
     wins++;
     $("#Wins").text(wins);
     gamereset();
 }
 else if (crystaltotal>goalnumber) {
-    audiochip.play();
-    audiolose.play();
     losses++;
     $("#Losses").text(losses);
     gamereset();
 }
-else {    audiochip.play();
-}
+else {}
 }
 
 function gamereset () {

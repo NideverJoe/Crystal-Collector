@@ -18,18 +18,18 @@
         crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Mystery+Quest&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Crystals Collector!</title>
+    <title>Crystal Collector!</title>
 </head>
 
-<body background="assets/images/back_cave.png">
+<body background="assets/images/rockywall.png">
     <container id="wrapper">
         <div>
-            <h1 class="text-white text-center">Crystals Collector</h1>
+            <h1 class="text-center">Eevee's Crystal Collector <img src="assets/images/eevee.png"></h1>
         </div>
         <br>
         <div class="row">
                 <div class="col-md-2"></div>
-                <div class="col-md-8 card" style="background-color: bisque">
+                <div class="col-md-8 card" style="background-color: #FAF3DD">
                 <h5><strong>Instructions:</strong></h5>
                 <p></p>
                 <h5>
@@ -60,64 +60,51 @@
         <br>
         <div class="row">
                 <div class="col-md-2"></div>
-                <div class="col-md-4 card text-center font-weight-bold" id="GoalNumber"
-                style="background-color: mediumseagreen">
-                <h2> Goal Number:</h2>
+                <div class="col-md-4 card text-center font-weight-bold" style="background-color: #BCD979">
+                <h2> Goal Number: <div id="GoalNumber"></div></h2>
             </div>
-            <div class="col-md-2 card text-center font-weight-bold" id="Wins" style="background-color: aqua">
-                <h3> Wins:</h3>
-                <p></p>
-                <p></p>
+            <div class="col-md-2 card text-center font-weight-bold" style="background-color: #C3DFE0">
+                <h3>Wins: <div id="Wins"></div></h3>
             </div>
-            <div class="col-md-2 card text-center font-weight-bold" id="Losses" style="background-color: indianred">
-                <h3> Losses:</h3>
-                <p></p>
-                <p></p>
+            <div class="col-md-2 card text-center font-weight-bold" style="background-color: #C84630">
+                <h3>Losses: <div id="Losses"></div></h3>
             </div>
             <div class="col-md-2"></div>
         </div>
         <br>
         <div class="row" id="crystalstashtext">
                 <div class="col-md-2"></div>
-            <div class="col-md-8 card text-center font-weight-bold" style="background-color: darkgoldenrod">
+            <div class="col-md-8 card text-center font-weight-bold" style="background-color: #80727B">
                 <h3>Crystal Stash</h3>
             </div>
             <div class="col-md-2"></div>
         </div>
         <div class="row pb-2" id="crystalstash">
                 <div class="col-md-2"></div>
-                <div class="col-md-2 text-center" style="background-color: darkgoldenrod" id="crystal firestone">
+                <button class="col-md-2 text-center buttons" style="background-color: #80727B" id="firestone">
                 <img src="assets/images/Fire_Stone.png" alt="Firestone">
-            </div>
-            <div class="col-md-2 text-center" style="background-color: darkgoldenrod" id="crystal waterstone">
+            </button>
+            <button class="col-md-2 text-center buttons" style="background-color: #80727B" id="waterstone">
                 <img src="assets/images/Water_Stone.png" alt="Waterstone">
-            </div>
-            <div class="col-md-2 text-center" style="background-color: darkgoldenrod" id="crystal thunderstone">
+            </button>
+            <button class="col-md-2 text-center buttons" style="background-color: #80727B" id="thunderstone">
                 <img src="assets/images/Thunder_Stone.png" alt="Thunderstone">
-            </div>
-            <div class="col-md-2 text-center" style="background-color: darkgoldenrod" id="crystal leafstone">
+            </button>
+            <button class="col-md-2 text-center buttons" style="background-color: #80727B" id="leafstone">
                 <img src="assets/images/Leaf_Stone.png" alt="Leafstone">
-            </div>
+            </button>
             <div class="col-md-2"></div>
         </div>
         <br>
-        <div class="row" id="totalscoretext">
+        <div class="row">
             <div class="col-md-4"></div>
-            <div class="col-md-4 text-center text-white card" style="background-color: darkcyan">
-                <h4>Current Crystal Total</h4>
+            <div class="col-md-4 text-center text-white card" style="background-color: #9DAD6F">
+                <h3>Current Crystal Total: <div id="totalscore"></div></h3>
             </div>
             <div class="col-md-4"></div>
         </div>
-        <div class="row" id="totalscore">
-            <div class="col-md-4"></div>
-            <div class="col-md-4 text-center text-white card  text-center" style="background-color: darkcyan">
-                <p></p>
-                <p></p>
-                <p></p>
-            </div>
-            <div class="col-md-4"></div>
-        </div>
-
+<br>
+<br>
     </container>
 </body>
 <script src="assets/javascript/game.js"></script>
