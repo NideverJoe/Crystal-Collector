@@ -1,8 +1,3 @@
-JQuery based game that count randomly assigned values to reach a target value.
-
-Sounds are used to confirm input, and for victory/loss announcements.
-
-
 # Crystal Collector
 
 ## Purpose
@@ -17,3 +12,4 @@ Sounds are used to confirm input, and for victory/loss announcements.
 * Stones are randomly assigned numerical values that are hidden
 * User selects stones and attempts to achieve the target value.
 * Images and assets used are from the Pokemon franchise
+* Sounds are used to confirm input, and for victory/loss announcements.
